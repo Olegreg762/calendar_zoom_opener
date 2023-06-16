@@ -46,10 +46,16 @@ link_opened = False
 
 while now_time <= zoom_time and not link_opened:
     now_time = datetime.now().strftime('%H:%M')
-    print('Not Time Yet!')
-    time.sleep(10)
+    if now_date not in links_by_date:
+        print('No Zoom links for today')
+        break
+    elif now_time <= zoom_time:
+        now_time = datetime.now().strftime('%H:%M')
+        print('Not Time Yet!')
+        time.sleep(10)
 # Check if today's date is a key in the dictionary
-    if now_date in links_by_date:
+    elif now_time >= zoom_time:
+        now_date in links_by_date
         # Checks if today's date is a key if so open the corresponding Zoom link
         zoom_links = links_by_date[now_date]
         for link in zoom_links:
