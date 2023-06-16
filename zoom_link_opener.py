@@ -8,7 +8,7 @@ now_date = datetime.now().strftime('%Y-%m-%d')
 now_time = datetime.now().strftime('%H:%M')
 
 # Define time to open Zoom link
-zoom_time =datetime.strptime('18:29', '%H:%M').strftime('%H:%M')
+zoom_time =datetime.strptime('18:27', '%H:%M').strftime('%H:%M')
 
 
 # Define a dictionary to store the links by date
